@@ -1,5 +1,5 @@
+const Authentication = require('./constrollers/authentication');
+
 module.exports = function(app) {
-  app.get('/', function(req, res, next) {
-    res.send(['hello', 'why', 'node']);
-  });
+  app.post('/login', Authentication.signup);
 }
